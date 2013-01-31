@@ -12,7 +12,7 @@ function calcDatStuff($input_val, $search, $iteration){
 			$theThingy[$value] = $input_val[$value];
 		}
 	}
-	ksort($theThingy,SORT_NATURAL);
+	// ksort($theThingy,SORT_NATURAL);
 		foreach($theThingy as $playkey => $playvalue){
 			// echo str_replace('_played', '', str_replace('week', 'Week ',$playkey)). " ";
 			// echo $playvalue . "<br>";
