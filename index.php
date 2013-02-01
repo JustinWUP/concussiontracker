@@ -47,7 +47,8 @@ function calcDatStuff($input_val, $search, $iteration){
 				echo $val[''];
 				calcDatStuff($val, "played", "Played");
 				calcDatStuff($val, "report", "Injured");
-				echo "<a href='$val[url]' target='_blank'>" . "Player Profile" . "</a>" . "<br>"; 
+				echo "<a href='$val[url]' target='_blank'>" . "Player Profile" . "</a>" . "<br>";
+				break; 
 			}
 		}
 		
