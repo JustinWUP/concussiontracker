@@ -1,7 +1,5 @@
-<?php //$yep = file_get_contents("http://www.pbs.org/wgbh/pages/frontline/js/data/concussions/weeks.json?cachebust=96")
+<?php 
 	$source = file_get_contents("weeks.json");
-
-
 ?>
 
 <?php
@@ -18,10 +16,7 @@ function calcDatStuff($input_val, $search, $iteration){
 			$theThingy[$value] = $input_val[$value];
 		}
 	}
-	// ksort($theThingy,SORT_NATURAL);
 		foreach($theThingy as $playkey => $playvalue){
-			// echo str_replace('_played', '', str_replace('week', 'Week ',$playkey)). " ";
-			// echo $playvalue . "<br>";
 			if($playvalue == "Yes"){
 				$playcount +=1;
 			}

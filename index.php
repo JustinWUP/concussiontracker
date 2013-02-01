@@ -17,41 +17,16 @@
 </head>
 
 
-<?php //$yep = file_get_contents("http://www.pbs.org/wgbh/pages/frontline/js/data/concussions/weeks.json?cachebust=96")
+<?php 
 	$source = file_get_contents("weeks.json");
-	$partial = file_get_contents("partial.php");
 ?>
 <?php 
 	$json = json_decode($source, TRUE);
 ?>
 		
 
-<?php 
-function calcDatStuff($input_val, $search, $iteration){
-	$theThingy = array();
-
-	foreach(array_keys($input_val) as $keynext => $value){
-		if(strpos($value, $search)){
-			$theThingy[$value] = $input_val[$value];
-		}
-	}
-	// ksort($theThingy,SORT_NATURAL);
-		foreach($theThingy as $playkey => $playvalue){
-			// echo str_replace('_played', '', str_replace('week', 'Week ',$playkey)). " ";
-			// echo $playvalue . "<br>";
-			if($playvalue == "Yes"){
-				$playcount +=1;
-			}
-		}
-	echo "Weeks " . $iteration . ": " . $playcount . "<br>";
-}
-		$name = $_POST["player"];
-		$pieces = explode(' ', $name);
-		?><?php echo $name; ?>
 		
 		<form action="./" method="POST">
-
-		<!--	<select  name="player" onchange="this.form.submit();"> -->
 			<select id="player" name="player" onchange="doIt();">
 				<option>Choose a Player</option>
 		<?php
