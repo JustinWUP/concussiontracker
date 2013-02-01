@@ -22,8 +22,21 @@ function calcDatStuff($input_val, $search, $iteration){
 		}
 	echo "Weeks " . $iteration . ": " . $playcount . "<br>";
 }
-		$name = "Austin Collie";
+		$name = $_GET["player"];
 		$pieces = explode(' ', $name);
+		?>
+		<form action="./" method="GET">
+			<select  name="player" onchange="this.form.submit();">
+				<option>Choose a Player</option>
+		<?php
+		foreach($json as $key => $val){
+		?>
+				<option><?php echo $val['player_first'] . ' ' . $val['player_last']; ?></option>
+			<?php }	?> 
+						</select>
+		</form>
+
+		<?php
 		foreach($json as $key => $val){
 			$playcount = 0;
 			$injurycount = 0;
@@ -37,9 +50,11 @@ function calcDatStuff($input_val, $search, $iteration){
 				echo "<a href='$val[url]' target='_blank'>" . "Player Profile" . "</a>" . "<br>"; 
 			}
 		}
+		
+		?>
 
 
 
 
 
-?>
+
