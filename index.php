@@ -1,5 +1,6 @@
 <head>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
 
 <?php //$yep = file_get_contents("http://www.pbs.org/wgbh/pages/frontline/js/data/concussions/weeks.json?cachebust=96")
@@ -30,6 +31,7 @@ function calcDatStuff($input_val, $search, $iteration){
 		$pieces = explode(' ', $name);
 		?>
 		<form action="./" method="GET">
+		<!--	<select  name="player" onchange="this.form.submit();"> -->
 			<select  name="player" onchange="this.form.submit();">
 				<option>Choose a Player</option>
 		<?php
@@ -37,7 +39,7 @@ function calcDatStuff($input_val, $search, $iteration){
 		?>
 				<option><?php echo $val['player_first'] . ' ' . $val['player_last']; ?></option>
 			<?php }	?> 
-						</select>
+			</select>
 		</form>
 
 		<?php
