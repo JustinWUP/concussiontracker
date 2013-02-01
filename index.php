@@ -1,3 +1,7 @@
+<head>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
+</head>
+
 <?php //$yep = file_get_contents("http://www.pbs.org/wgbh/pages/frontline/js/data/concussions/weeks.json?cachebust=96")
 		$source = file_get_contents("weeks.json");
 		?>
